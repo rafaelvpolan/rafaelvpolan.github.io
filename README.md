@@ -2,7 +2,7 @@
 
 Desenvolvedor Web FullStack Sênior
 
-Acesse: [rafaelvpolan.github.io](https:/rafaelvpolan.github.io)
+Acesse: [rafaelvpolan.github.io](https://rafaelvpolan.github.io)
 
 
 
