@@ -1,2 +1,9 @@
-# rafaelvpolan.github.io
-web / app full stack development
+# Rafael Vergo Polan 
+
+Desenvolvedor FullStack Sênior
+
+Acesse: [rafaelvpolan.github.io](https:/rafaelvpolan.github.io)
+
+
+
+

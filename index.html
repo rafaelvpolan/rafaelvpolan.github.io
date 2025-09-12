@@ -1,16 +1,549 @@
-<h1>Rafael Vergo Polan</h1>
-<p>Ux/Ui designer, Desenvolvedor Web e Apps híbridos</p>
-<br>
-<ul>
-	<li>Nodejs</li>
-	<li>Html5</li>
-	<li>CSS3</li>
-	<li>VueJS</li>
-	<li>Cordova</li>
-	<li>Quasar</li>
-	<li>D3js</li>
-</ul>
-<hr>
-<p>
-rafaelvpolan@gmail.com
-</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currículo - Rafael Polan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=National+Park:wght@200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mansalva&family=Paytone+One&display=swap" rel="stylesheet">
+<style>
+  /* Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  body {
+    background: #f4f7f9;
+    position:relative;
+    color: #2d2d2d;
+    .bg-page{
+      position: fixed;
+      top:0px;
+      left: 0px;
+      /* background-image: url("./Shooting Stars.svg"); */
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
+
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    color: #8c93f2;;
+    margin-bottom: 5px;
+     font-family: "Paytone One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+  }
+
+  header p {
+    font-size: 1.2rem;
+    color: #e0e0e0;;
+  }
+
+  h2 {
+    color: #ffffff;
+    
+    margin-bottom: 5px;
+    display: inline-block;
+    
+    
+         font-family: "Mansalva", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  z-index: 2;
+  
+  
+  }
+  .font-paytone{
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  a:link{
+    color:#5bfffc!important;
+  }
+  a:visited{
+    color:hsl(266, 100%, 78%)!important;
+  }
+
+  /* Skills cards */
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .skill-card {
+    background: linear-gradient(135deg, #ffffff, #e0f0ff);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+   
+
+  }
+
+
+
+  .skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+
+  .skill-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .skill-level {
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid white;
+    padding: 2px;
+  }
+
+  .skill-level-bar {
+    height: 100%;
+    border-radius: 6px;
+    width: 0;
+    animation: fillSkill 1.3s forwards;
+    transition: all 1.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+   backdrop-filter: blur(5px); /* desfoca o fundo atrás do card */
+  -webkit-backdrop-filter: blur(10px); /* para Safari */
+
+  }
+
+  /* Níveis com cores diferentes */
+  .basico { background: linear-gradient(#d6fb05,#fbbc05); animation-delay: 1.5s; }
+  .intermediario { background: linear-gradient(#4bd24f,#34a853); animation-delay: 1.6s; }
+  .avancado { background: linear-gradient(#2cb1f9,#1a73e8); animation-delay: 1.7s; }
+
+  @keyframes fillSkill {
+    to { width: var(--skill-width); }
+  }
+
+
+
+  /* Responsividade */
+  @media(max-width: 600px) {
+    header h1 { font-size: 2rem; }
+    .skill-card { padding: 15px; }
+  }
+  section.card{
+    padding: 2em;
+  border-radius: 15px;
+  line-height: 25px;
+  }
+
+  .glass-card {
+  background: rgba(255, 255, 255, 0.2); /* cor branca semi-transparente */
+  
+ 
+  
+  color: white;
+  backdrop-filter: blur(5px); /* desfoca o fundo atrás do card */
+  -webkit-backdrop-filter: blur(10px); /* para Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* borda leve para dar profundidade */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+
+  a-hole {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    display: block;
+    width: 150%;
+    height: 140%;
+
+    background: radial-gradient(ellipse at 50% 55%, transparent 10%, rgb(0, 0, 0) 50%);
+    transform: translate3d(-50%, -50%, 0);
+
+    content: "";
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(
+      ellipse at 50% 75%,
+      #4023d3 20%,
+      transparent 75%
+    );
+    mix-blend-mode: overlay;
+    transform: translate3d(-50%, -50%, 0);
+
+    content: "";
+  }
+
+  @keyframes aura-glow {
+    0% {
+      background-position: 0 100%;
+    }
+    100% {
+      background-position: 0 300%;
+    }
+  }
+
+  .aura {
+    position: absolute;
+    top: -71.5%;
+    left: 50%;
+    z-index: 3;
+
+    width: 30%;
+    height: 140%;
+
+    background: linear-gradient(
+        20deg,
+        #00f8f1,
+        #ffbd1e20 16.5%,
+        #fe848f 33%,
+        #ad242f20 49.5%,
+        #00f8f1 66%,
+        #00f8f160 85.5%,
+        #ffbd1e 100%
+      )
+      0 100% / 100% 200%;
+    border-radius: 0 0 100% 100%;
+    filter: blur(50px);
+    mix-blend-mode: plus-lighter;
+    opacity: 0.75;
+    transform: translate3d(-50%, 0, 0);
+
+    animation: aura-glow 5s infinite linear;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    width: 100%;
+    height: 100%;
+
+    background: repeating-linear-gradient(
+      transparent,
+      transparent 1px,
+      white 1px,
+      white 2px
+    );
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+  }
+
+  canvas {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+section.strong{
+  display: flex;
+  gap: 10px;
+  span{
+    display: inline;
+    padding: 2px 5px;
+    font-size: 10pt;
+    
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="bg-page">
+  <a-hole>
+  <canvas class="js-canvas"></canvas>
+  <div class="aura"></div>
+  <div class="overlay"></div>
+</a-hole><!-- .a-hole -->
+</div>
+<div class="container">
+  <header>
+    <h1>Rafael Vergo Polan</h1>
+    <p>Desenvolvedor Web Sênior | Full Stack | UX/UI</p>
+  </header>
+
+  <section>
+    <h2>Sobre</h2>
+    <section data-aos="zoom-in-up" class="card glass-card">
+
+      <p>Desenvolvedor fullstack com mais de 10 anos de experiência em criação de sistemas escaláveis e bem estruturados. </p>
+<p>Busco oportunidades para aplicar minha experiência em projetos desafiadores, contribuindo com soluções eficientes e inovadoras. Aberto a novas propostas e pronto para integrar equipes que valorizem qualidade e evolução constante.</p>
+
+    </section>
+  </section>
+  <section>
+    <h2>Pontos fortes</h2>
+    <section data-aos="zoom-in-up" class="card glass-card strong font-paytone">
+    
+    <span data-aos="zoom-in-left" class="font-paytone">Encontrar origem e resolver problemas complexo</span> 
+    <span data-aos="zoom-in-left" class="font-paytone">Pensa no sistema como um negócio.</span>  
+    <span data-aos="zoom-in-left" class="font-paytone">Desenvolve arquitetura de maneiras dinamicas, customizaveis e adaptaveis.</span>  
+    <span data-aos="zoom-in-left" class="font-paytone">Qualidade de design </span> 
+    <span data-aos="zoom-in-left" class="font-paytone">Preza pela “Experiência do usuário” UX</span>  
+    <span data-aos="zoom-in-left" class="font-paytone">Utiliza recentes práticas de toda a cadeia de desenvolvimento</span>  
+    <span data-aos="zoom-in-left" class="font-paytone">Adaptação aos cenários mais diversos </span> 
+    </section>
+  </section>
+
+  <section>
+    <h2>Front-end</h2>
+    <div class="skills">
+      <div data-aos="zoom-in-up" class="skill-card glass-card ">
+        <div class="skill-name">HTML</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">CSS/SCSS</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">TypeScript</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Vue.js</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Nuxt.js</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Pinia/Vuex</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">I18n</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Angular 1</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">UX</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Cordova</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Ionic 1</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Quasar</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">SEO</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Jest/Vitest</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Playwright</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+
+    </div>
+  </section>
+  <section>
+    <h2>Back-end</h2>
+    <div class="skills">
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">NodeJS</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Nuxt/Server</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">PHP</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Zend Framework 1</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Nuxt/Server</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">API REST</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">API TRPC</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">WebSocket</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">SSE</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>  
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Jobs</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>  
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Redis</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>  
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">ElasticSearch</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>  
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">MySql</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>  
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">MongoDB</div>
+        <div class="skill-level"><div class="skill-level-bar avancado" style="--skill-width:100%"></div></div>
+      </div>  
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">LDAP</div>
+        <div class="skill-level"><div class="skill-level-bar basico" style="--skill-width:40%"></div></div>
+      </div>  
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name">Jest</div>
+        <div class="skill-level"><div class="skill-level-bar intermediario" style="--skill-width:70%"></div></div>
+      </div>  
+    </div>
+  </section>
+  <section>
+    <h2>Design Grafico / Multimídia</h2>
+    <div class="skills">
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name"><img src="./logos/Adobe_Photoshop_CC_icon.svg" alt="" width="50px" /></div>        
+        <div>Photoshop</div>        
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name"><img src="./logos/Adobe_Illustrator_CC_icon.svg" alt="" width="50px" /></div>        
+        <div>Illustrator</div>        
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name"><img src="./logos/Adobe_Premiere_Pro_CC_icon.svg" alt="" width="50px" /></div>        
+        <div>Premiere</div>        
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name"><img src="./logos/Adobe_After_Effects_CC_icon.svg" alt="" width="50px" /></div>        
+        <div>After Effects</div>        
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name"><img src="./logos/corel.png" alt="" width="50px" /></div>        
+        <div>Corel Draw</div>        
+      </div>
+      <div data-aos="zoom-in-up" class="skill-card glass-card">
+        <div class="skill-name"><img src="./logos/Inkscape_logo_2.svg" alt="" width="50px" /></div>        
+        <div>Inkscape</div>        
+      </div>
+
+    </div>
+  </section>
+
+  <section >
+    <h2>Contato</h2>
+    <section data-aos="zoom-in-up" class="card glass-card" style="display: flex; flex-wrap: wrap; flex-direction: row;">
+      <div>
+
+        <p><span class="font-paytone">Email:</span> <a href="mailTo:rafaelvpolan@gmail.com" target="_blank"> rafaelvpolan@gmail.com</a></p>
+        <p><span class="font-paytone">WhatSapp:</span>  <a href="https://wa.me/5541992088769" target="_blank"> (41) 99208-8769</a></p>
+        <p><span class="font-paytone">LinkedIn:</span> <a href="https://linkedin.com/in/rafaelvpolan"> https://linkedin.com/in/rafaelvpolan </a></p>
+        <p><span class="font-paytone">GitHub:</span> <a href="https://github.com/rafaelvpolan">github.com/rafaelvpolan</a></p>
+      </div>
+
+    <div style="margin-left: auto; background:white; border-radius:7.5px; padding:5px;">
+      <img src="whats-qr-code.png" width="100px" alt="">
+    </div>
+
+    </section>
+  </section>
+</div>
+
+<script type="module" src="script.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
