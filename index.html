@@ -53,9 +53,9 @@
     font-size: 3rem;
     color: #8c93f2;;
     margin-bottom: 5px;
-     font-family: "Paytone One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 
 
   }
@@ -75,8 +75,9 @@
          font-family: "Mansalva", sans-serif;
   font-weight: 400;
   font-style: normal;
-
+    font-size: 2em;
   z-index: 2;
+  transform: rotate(-5deg);
   
   
   }
@@ -115,8 +116,6 @@
    
 
   }
-
-
 
   .skill-card:hover {
     transform: translateY(-10px);
@@ -157,31 +156,36 @@
     to { width: var(--skill-width); }
   }
 
+  .qr-code{
+    margin-left:auto; background:white; border-radius:7.5px; padding:5px;
+  }
 
 
   /* Responsividade */
   @media(max-width: 600px) {
     header h1 { font-size: 2rem; }
     .skill-card { padding: 15px; }
+    header p { font-size: .8rem; }
+    .qr-code{ margin:20px auto 0 auto;  }
+    h2{
+      font-size: 1.5rem;
+    }
   }
   section.card{
     padding: 2em;
-  border-radius: 15px;
-  line-height: 25px;
+    border-radius: 15px;
+    line-height: 25px;
   }
 
   .glass-card {
-  background: rgba(255, 255, 255, 0.2); /* cor branca semi-transparente */
-  
- 
-  
-  color: white;
-  backdrop-filter: blur(5px); /* desfoca o fundo atrás do card */
-  -webkit-backdrop-filter: blur(10px); /* para Safari */
-  border: 1px solid rgba(255, 255, 255, 0.3); /* borda leve para dar profundidade */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    background: rgba(255, 255, 255, 0.2); /* cor branca semi-transparente */
+    color: white;
+    backdrop-filter: blur(5px); /* desfoca o fundo atrás do card */
+    -webkit-backdrop-filter: blur(10px); /* para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* borda leve para dar profundidade */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
 
 
@@ -315,6 +319,7 @@ section.strong{
   }
 }
 
+
 </style>
 </head>
 <body>
@@ -333,10 +338,10 @@ section.strong{
 
   <section>
     <h2>Sobre</h2>
-    <section data-aos="zoom-in-up" class="card glass-card">
+    <section data-aos="zoom-in-up" class="card glass-card" >
 
-      <p>Desenvolvedor fullstack com mais de 10 anos de experiência em criação de sistemas escaláveis e bem estruturados. </p>
-<p>Busco oportunidades para aplicar minha experiência em projetos desafiadores, contribuindo com soluções eficientes e inovadoras. Aberto a novas propostas e pronto para integrar equipes que valorizem qualidade e evolução constante.</p>
+      <p style="text-align: justify;">Desenvolvedor fullstack com mais de 10 anos de experiência em criação de sistemas escaláveis e bem estruturados. </p>
+      <p style="text-align: justify;">Procuro oportunidades para aplicar minha experiência em projetos desafiadores, contribuindo com soluções eficientes e inovadoras. Aberto a novas propostas e pronto para integrar equipes que valorizem qualidade e evolução constante.</p>
 
     </section>
   </section>
@@ -344,7 +349,7 @@ section.strong{
     <h2>Pontos fortes</h2>
     <section data-aos="zoom-in-up" class="card glass-card strong font-paytone">
     
-    <span data-aos="zoom-in-left" class="font-paytone">Encontrar origem e resolver problemas complexo</span> 
+    <span data-aos="zoom-in-left" class="font-paytone">Identifica a origem e resolve problemas complexos</span> 
     <span data-aos="zoom-in-left" class="font-paytone">Pensa no sistema como um negócio.</span>  
     <span data-aos="zoom-in-left" class="font-paytone">Desenvolve arquitetura de maneiras dinamicas, customizaveis e adaptaveis.</span>  
     <span data-aos="zoom-in-left" class="font-paytone">Qualidade de design </span> 
@@ -528,14 +533,13 @@ section.strong{
     <h2>Contato</h2>
     <section data-aos="zoom-in-up" class="card glass-card" style="display: flex; flex-wrap: wrap; flex-direction: row;">
       <div>
-
         <p><span class="font-paytone">Email:</span> <a href="mailTo:rafaelvpolan@gmail.com" target="_blank"> rafaelvpolan@gmail.com</a></p>
         <p><span class="font-paytone">WhatSapp:</span>  <a href="https://wa.me/5541992088769" target="_blank"> (41) 99208-8769</a></p>
         <p><span class="font-paytone">LinkedIn:</span> <a href="https://linkedin.com/in/rafaelvpolan"> https://linkedin.com/in/rafaelvpolan </a></p>
         <p><span class="font-paytone">GitHub:</span> <a href="https://github.com/rafaelvpolan">https://github.com/rafaelvpolan</a></p>
       </div>
 
-    <div style="margin-left: auto; background:white; border-radius:7.5px; padding:5px;">
+    <div class="qr-code">
       <img src="whats-qr-code.png" width="100px" alt="">
     </div>
 
