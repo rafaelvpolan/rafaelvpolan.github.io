@@ -1,6 +1,6 @@
 # Rafael Vergo Polan 
 
-Desenvolvedor FullStack Sênior
+Desenvolvedor Web FullStack Sênior
 
 Acesse: [rafaelvpolan.github.io](https:/rafaelvpolan.github.io)
 
